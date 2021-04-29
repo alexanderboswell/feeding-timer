@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F37B3E6B2639EC390005EAF1 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B3E6A2639EC390005EAF1 /* TimerManager.swift */; };
+		F37B3E70263A17D90005EAF1 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B3E6F263A17D90005EAF1 /* CountdownView.swift */; };
+		F37B3E7B263A71AB0005EAF1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B3E7A263A71AB0005EAF1 /* NotificationManager.swift */; };
 		F3A6B1F9263305500033D3F7 /* FeedingTimer WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F3A6B1F8263305500033D3F7 /* FeedingTimer WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F3A6B1FE263305550033D3F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3A6B1FD263305550033D3F7 /* Assets.xcassets */; };
 		F3A6B205263305560033D3F7 /* FeedingTimer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F3A6B204263305560033D3F7 /* FeedingTimer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -17,6 +20,9 @@
 		F3A6B212263305560033D3F7 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6B211263305560033D3F7 /* ComplicationController.swift */; };
 		F3A6B214263305570033D3F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3A6B213263305570033D3F7 /* Assets.xcassets */; };
 		F3A6B217263305570033D3F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3A6B216263305570033D3F7 /* Preview Assets.xcassets */; };
+		F3A6B22B2633058D0033D3F7 /* ComplicationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6B22A2633058D0033D3F7 /* ComplicationViews.swift */; };
+		F3A6B23126332B850033D3F7 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6B23026332B850033D3F7 /* UIColor.swift */; };
+		F3A6B2362633E4720033D3F7 /* InitializeTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6B2352633E4710033D3F7 /* InitializeTimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +68,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F37B3E6A2639EC390005EAF1 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		F37B3E6F263A17D90005EAF1 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		F37B3E7A263A71AB0005EAF1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		F3A6B1F42633054F0033D3F7 /* FeedingTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedingTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A6B1F8263305500033D3F7 /* FeedingTimer WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FeedingTimer WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A6B1FD263305550033D3F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +85,9 @@
 		F3A6B216263305570033D3F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F3A6B218263305570033D3F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3A6B219263305570033D3F7 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		F3A6B22A2633058D0033D3F7 /* ComplicationViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationViews.swift; sourceTree = "<group>"; };
+		F3A6B23026332B850033D3F7 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		F3A6B2352633E4710033D3F7 /* InitializeTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeTimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +132,9 @@
 		F3A6B208263305560033D3F7 /* FeedingTimer WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				F3A6B23A2633E4750033D3F7 /* Views */,
+				F3A6B22F26332B740033D3F7 /* Extensions */,
 				F3A6B209263305560033D3F7 /* FeedingTimerApp.swift */,
-				F3A6B20B263305560033D3F7 /* ContentView.swift */,
 				F3A6B20D263305560033D3F7 /* NotificationController.swift */,
 				F3A6B20F263305560033D3F7 /* NotificationView.swift */,
 				F3A6B211263305560033D3F7 /* ComplicationController.swift */,
@@ -129,6 +142,8 @@
 				F3A6B218263305570033D3F7 /* Info.plist */,
 				F3A6B219263305570033D3F7 /* PushNotificationPayload.apns */,
 				F3A6B215263305570033D3F7 /* Preview Content */,
+				F37B3E6A2639EC390005EAF1 /* TimerManager.swift */,
+				F37B3E7A263A71AB0005EAF1 /* NotificationManager.swift */,
 			);
 			path = "FeedingTimer WatchKit Extension";
 			sourceTree = "<group>";
@@ -139,6 +154,25 @@
 				F3A6B216263305570033D3F7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F3A6B22F26332B740033D3F7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F3A6B23026332B850033D3F7 /* UIColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F3A6B23A2633E4750033D3F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3A6B2352633E4710033D3F7 /* InitializeTimerView.swift */,
+				F3A6B22A2633058D0033D3F7 /* ComplicationViews.swift */,
+				F3A6B20B263305560033D3F7 /* ContentView.swift */,
+				F37B3E6F263A17D90005EAF1 /* CountdownView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,9 +302,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3A6B20E263305560033D3F7 /* NotificationController.swift in Sources */,
+				F37B3E6B2639EC390005EAF1 /* TimerManager.swift in Sources */,
+				F3A6B23126332B850033D3F7 /* UIColor.swift in Sources */,
 				F3A6B20C263305560033D3F7 /* ContentView.swift in Sources */,
+				F37B3E7B263A71AB0005EAF1 /* NotificationManager.swift in Sources */,
+				F3A6B22B2633058D0033D3F7 /* ComplicationViews.swift in Sources */,
 				F3A6B212263305560033D3F7 /* ComplicationController.swift in Sources */,
+				F37B3E70263A17D90005EAF1 /* CountdownView.swift in Sources */,
 				F3A6B20A263305560033D3F7 /* FeedingTimerApp.swift in Sources */,
+				F3A6B2362633E4720033D3F7 /* InitializeTimerView.swift in Sources */,
 				F3A6B210263305560033D3F7 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
