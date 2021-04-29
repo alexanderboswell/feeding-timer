@@ -14,33 +14,25 @@ struct InitializeTimerView: View {
 	
 	var body: some View {
 		VStack {
-			Text("Next feeding in...")
+			Text("timer-headline")
 				.bold()
 			GeometryReader { geometry in
 				HStack(spacing: 0){
-					Picker("", selection: $selectedHour){
-						ForEach(0..<13, id: \.self) { i in
-							Text("\(i) hrs").tag(i)
-						}
-					}.pickerStyle(WheelPickerStyle())
-					.frame(maxWidth: geometry.size.width / 2)
-					.clipped()
-					Picker("", selection: $selectedMinutes){
-						ForEach((0..<12).map { $0 * 5 }, id: \.self) { i in
-							Text("\(i) min").tag(i)
-						}
-					}.pickerStyle(WheelPickerStyle())
-					.frame(maxWidth: geometry.size.width / 2)
-					.clipped()
+					DateComponentPickerView(label: NSLocalizedString("hour-abbreviation", comment: "Hours label for timer"), interval: 1, intervalCount: 13, selection: $selectedHour)
+						.frame(maxWidth: geometry.size.width / 2)
+						.clipped()
+					DateComponentPickerView(label: NSLocalizedString("minutes-abbreviation", comment: "Minutes label for timer"), interval: 5, intervalCount: 12, selection: $selectedMinutes)
+						.frame(maxWidth: geometry.size.width / 2)
+						.clipped()
 				}
-			}
+			}.layoutPriority(1)
 			Spacer()
 			Button(action: {
 				self.timerManager.setNextFeeding()
-				// TODO
-				_ = NotificationManager().scheduleLocalNotification(date: self.timerManager.nextFeeding, title: "Next feeding!", subtitle: "Its time to feed")
+				self.timerManager.notificationIdentifier = NotificationManager().scheduleLocalNotification(date: self.timerManager.nextFeeding, title: NSLocalizedString("notification-title", comment: "Notification title for the next baby feeding"), subtitle: NSLocalizedString("notification-subtitle", comment: "Notification subtitle for the next baby feeding"))
+				
 			}, label: {
-				Text("Start")
+				Text("start-text")
 			})
 		}
 	}

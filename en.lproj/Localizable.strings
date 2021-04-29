@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  FeedingTimer
+
+  Created by alexander boswell on 4/29/21.
+  
+*/
+
+
+"start-text" = "Start";
+"cancel-text" = "Cancel";
+"notification-title" = "Next baby feeding!";
+"notification-subtitle" = "It's time to eat!";
+"hour-abbreviation" = "hrs";
+"minutes-abbreviation" = "mins";
+"timer-headline" = "Next baby feeding in...";

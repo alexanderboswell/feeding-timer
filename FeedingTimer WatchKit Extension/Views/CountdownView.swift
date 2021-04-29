@@ -26,9 +26,10 @@ struct CountdownView: View {
 					})
 			}
 			Button(action: {
+				NotificationManager().removeLocationNotification(identifier: self.timerManager.notificationIdentifier)
 				self.timerManager.clear()
 			}, label: {
-				Text("Cancel")
+				Text("cancel-text")
 			})
 		}
 	}

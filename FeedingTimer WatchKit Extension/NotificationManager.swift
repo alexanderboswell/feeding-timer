@@ -21,6 +21,7 @@ class NotificationManager {
 	
 	func scheduleLocalNotification(date: Date?, title: String, subtitle: String) -> UUID {
 		guard let notificationDate = date else {
+			// TODO
 			return UUID()
 		}
 		let content = UNMutableNotificationContent()
@@ -35,5 +36,13 @@ class NotificationManager {
 		
 		UNUserNotificationCenter.current().add(request)
 		return identifier
+	}
+	
+	func removeLocationNotification(identifier: UUID?) {
+		guard let id = identifier else {
+			// TODO
+			return
+		}
+		UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [id.uuidString])
 	}
 }
