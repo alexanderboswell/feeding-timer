@@ -19,7 +19,7 @@ struct TimerManagerConstants {
 final class TimerManager: ObservableObject {
 	@Published var nextFeeding: Date?
 	@Published var notificationIdentifier: UUID?
-	@Published var selectedHour: Int = 3
+	@Published var selectedHour: Int = 0
 	@Published var selectedMinutes: Int = 0
 
 	func setNextFeeding() {
@@ -43,7 +43,12 @@ final class TimerManager: ObservableObject {
 		}
 		
 		if let data = UserDefaults.standard.value(forKey: TimerManagerConstants.NextFeedingKey) as? Date {
-			self.nextFeeding = data
+			
+			if data <= Date() {
+				self.nextFeeding = nil
+			} else {
+				self.nextFeeding = data
+			}
 		}
 	}
 	

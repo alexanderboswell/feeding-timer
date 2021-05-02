@@ -13,12 +13,10 @@ struct DateComponentPickerView: View {
 	var intervalCount: Int
 	@Binding var selection: Int
 	var body: some View {
-		VStack {
-			Picker(selection: $selection, label: Text(label).font(.title3)) {
-				ForEach((0..<intervalCount).map { $0 * interval }, id: \.self) { i in
-					Text("\(i)").tag(i)
-				}
-			}.pickerStyle(WheelPickerStyle())
-		}
+		Picker(selection: $selection, label: Text(label).font(.title3)) {
+			ForEach((0..<intervalCount).map { $0 * interval }, id: \.self) { i in
+				Text("\(i)").tag(i)
+			}
+		}.pickerStyle(WheelPickerStyle())
 	}
 }

@@ -14,8 +14,6 @@ struct InitializeTimerView: View {
 	
 	var body: some View {
 		VStack {
-			Text("timer-headline")
-				.bold()
 			GeometryReader { geometry in
 				HStack(spacing: 0){
 					DateComponentPickerView(label: NSLocalizedString("hour-abbreviation", comment: "Hours label for timer"), interval: 1, intervalCount: 13, selection: $selectedHour)
@@ -26,14 +24,13 @@ struct InitializeTimerView: View {
 						.clipped()
 				}
 			}.layoutPriority(1)
-			Spacer()
 			Button(action: {
 				self.timerManager.setNextFeeding()
 				self.timerManager.notificationIdentifier = NotificationManager().scheduleLocalNotification(date: self.timerManager.nextFeeding, title: NSLocalizedString("notification-title", comment: "Notification title for the next baby feeding"), subtitle: NSLocalizedString("notification-subtitle", comment: "Notification subtitle for the next baby feeding"))
 				
 			}, label: {
 				Text("start-text")
-			})
+			}).disabled(selectedHour == 0 && selectedMinutes == 0)
 		}
 	}
 }

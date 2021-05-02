@@ -12,16 +12,20 @@ struct ContentView: View {
 	@EnvironmentObject var timerManager: TimerManager
 	
 	var body: some View {
-		if timerManager.nextFeeding != nil {
-			CountdownView()
-		} else {
-			InitializeTimerView(selectedHour: $timerManager.selectedHour, selectedMinutes: $timerManager.selectedMinutes)
+		VStack {
+			Text("timer-headline")
+				.bold()
+			if timerManager.nextFeeding != nil {
+				CountdownView()
+			} else {
+				InitializeTimerView(selectedHour: $timerManager.selectedHour, selectedMinutes: $timerManager.selectedMinutes)
+			}
 		}
 	}
 	
 	struct ContentView_Previews: PreviewProvider {
 		static var previews: some View {
-			ContentView()
+			ContentView().environmentObject(TimerManager())
 		}
 	}
 }
