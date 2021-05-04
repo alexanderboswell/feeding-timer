@@ -30,13 +30,9 @@ struct InitializeTimerView: View {
 				
 			}, label: {
 				Text("start-text")
-			}).disabled(selectedHour == 0 && selectedMinutes == 0)
+			})
+			.buttonStyle(PrimaryButtonStyle())
+			.disabled(selectedHour == 0 && selectedMinutes == 0)
 		}
-	}
-}
-
-struct InitializeTimerView_Previews: PreviewProvider {
-	static var previews: some View {
-		InitializeTimerView(selectedHour: .constant(5), selectedMinutes: .constant(45)).environmentObject(TimerManager())
 	}
 }

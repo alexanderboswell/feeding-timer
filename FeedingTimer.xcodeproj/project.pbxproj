@@ -25,8 +25,8 @@
 		F3A6B214263305570033D3F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3A6B213263305570033D3F7 /* Assets.xcassets */; };
 		F3A6B217263305570033D3F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3A6B216263305570033D3F7 /* Preview Assets.xcassets */; };
 		F3A6B22B2633058D0033D3F7 /* ComplicationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6B22A2633058D0033D3F7 /* ComplicationViews.swift */; };
-		F3A6B23126332B850033D3F7 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6B23026332B850033D3F7 /* UIColor.swift */; };
 		F3A6B2362633E4720033D3F7 /* InitializeTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6B2352633E4710033D3F7 /* InitializeTimerView.swift */; };
+		F3B3F9E5263F565F00918930 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B3F9E4263F565F00918930 /* PrimaryButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,8 +95,8 @@
 		F3A6B218263305570033D3F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3A6B219263305570033D3F7 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		F3A6B22A2633058D0033D3F7 /* ComplicationViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationViews.swift; sourceTree = "<group>"; };
-		F3A6B23026332B850033D3F7 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		F3A6B2352633E4710033D3F7 /* InitializeTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeTimerView.swift; sourceTree = "<group>"; };
+		F3B3F9E4263F565F00918930 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +145,6 @@
 				F37B3E6A2639EC390005EAF1 /* TimerManager.swift */,
 				F37B3E7A263A71AB0005EAF1 /* NotificationManager.swift */,
 				F3A6B23A2633E4750033D3F7 /* Views */,
-				F3A6B22F26332B740033D3F7 /* Extensions */,
 				F3A6B209263305560033D3F7 /* FeedingTimerApp.swift */,
 				F3A6B20D263305560033D3F7 /* NotificationController.swift */,
 				F3A6B20F263305560033D3F7 /* NotificationView.swift */,
@@ -154,6 +153,7 @@
 				F3A6B218263305570033D3F7 /* Info.plist */,
 				F3A6B219263305570033D3F7 /* PushNotificationPayload.apns */,
 				F3A6B215263305570033D3F7 /* Preview Content */,
+				F3B3F9E4263F565F00918930 /* PrimaryButtonStyle.swift */,
 			);
 			path = "FeedingTimer WatchKit Extension";
 			sourceTree = "<group>";
@@ -164,14 +164,6 @@
 				F3A6B216263305570033D3F7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		F3A6B22F26332B740033D3F7 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				F3A6B23026332B850033D3F7 /* UIColor.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F3A6B23A2633E4750033D3F7 /* Views */ = {
@@ -318,9 +310,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B3F9E5263F565F00918930 /* PrimaryButtonStyle.swift in Sources */,
 				F3A6B20E263305560033D3F7 /* NotificationController.swift in Sources */,
 				F37B3E6B2639EC390005EAF1 /* TimerManager.swift in Sources */,
-				F3A6B23126332B850033D3F7 /* UIColor.swift in Sources */,
 				F3A6B20C263305560033D3F7 /* ContentView.swift in Sources */,
 				F37B3E7B263A71AB0005EAF1 /* NotificationManager.swift in Sources */,
 				F3A6B22B2633058D0033D3F7 /* ComplicationViews.swift in Sources */,
