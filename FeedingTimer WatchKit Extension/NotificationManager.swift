@@ -19,30 +19,21 @@ class NotificationManager {
 		}
 	}
 	
-	func scheduleLocalNotification(date: Date?, title: String, subtitle: String) -> UUID {
-		guard let notificationDate = date else {
-			// TODO
-			return UUID()
-		}
+	func scheduleLocalNotification(timeIntervalSinceNow: Double, title: String, subtitle: String) {
 		let content = UNMutableNotificationContent()
 		content.title = title
 		content.subtitle = subtitle
 		content.sound = UNNotificationSound.default
-		
-		let trigger = UNTimeIntervalNotificationTrigger(timeInterval: notificationDate.timeIntervalSinceNow, repeats: false)
+		print(timeIntervalSinceNow)
+		let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeIntervalSinceNow, repeats: false)
 		
 		let identifier = UUID()
 		let request = UNNotificationRequest(identifier: identifier.uuidString, content: content, trigger: trigger)
 		
 		UNUserNotificationCenter.current().add(request)
-		return identifier
 	}
 	
-	func removeLocationNotification(identifier: UUID?) {
-		guard let id = identifier else {
-			// TODO
-			return
-		}
-		UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [id.uuidString])
+	func removeLocationNotification() {
+		UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
 	}
 }

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F37B3E6B2639EC390005EAF1 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B3E6A2639EC390005EAF1 /* TimerManager.swift */; };
+		F37B3E6B2639EC390005EAF1 /* DateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B3E6A2639EC390005EAF1 /* DateState.swift */; };
 		F37B3E70263A17D90005EAF1 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B3E6F263A17D90005EAF1 /* CountdownView.swift */; };
 		F37B3E7B263A71AB0005EAF1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B3E7A263A71AB0005EAF1 /* NotificationManager.swift */; };
 		F37B3E86263B26C30005EAF1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F37B3E8A263B26C30005EAF1 /* Localizable.strings */; };
@@ -72,7 +72,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F37B3E6A2639EC390005EAF1 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		F37B3E6A2639EC390005EAF1 /* DateState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateState.swift; sourceTree = "<group>"; };
 		F37B3E6F263A17D90005EAF1 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		F37B3E7A263A71AB0005EAF1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		F37B3E89263B26C30005EAF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 		F3A6B208263305560033D3F7 /* FeedingTimer WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				F37B3E6A2639EC390005EAF1 /* TimerManager.swift */,
+				F37B3E6A2639EC390005EAF1 /* DateState.swift */,
 				F37B3E7A263A71AB0005EAF1 /* NotificationManager.swift */,
 				F3A6B23A2633E4750033D3F7 /* Views */,
 				F3A6B209263305560033D3F7 /* FeedingTimerApp.swift */,
@@ -312,7 +312,7 @@
 			files = (
 				F3B3F9E5263F565F00918930 /* PrimaryButtonStyle.swift in Sources */,
 				F3A6B20E263305560033D3F7 /* NotificationController.swift in Sources */,
-				F37B3E6B2639EC390005EAF1 /* TimerManager.swift in Sources */,
+				F37B3E6B2639EC390005EAF1 /* DateState.swift in Sources */,
 				F3A6B20C263305560033D3F7 /* ContentView.swift in Sources */,
 				F37B3E7B263A71AB0005EAF1 /* NotificationManager.swift in Sources */,
 				F3A6B22B2633058D0033D3F7 /* ComplicationViews.swift in Sources */,

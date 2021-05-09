@@ -26,11 +26,6 @@ struct ComplicationViewCornerCircular: View {
 			case .tinted:
 				Circle()
 					.fill(Color.clear)
-//						RadialGradient(
-//							gradient: Gradient(colors: [.clear, .white]),
-//							center: .center,
-//							startRadius: 10,
-//							endRadius: 15))
 			@unknown default:
 				Circle()
 			}
@@ -52,7 +47,7 @@ struct ComplicationViews_Previews: PreviewProvider {
 			
 			CLKComplicationTemplateGraphicCornerCircularView(
 				ComplicationViewCornerCircular()
-			).previewContext()
+			).previewContext(faceColor: .multicolor)
 		}
     }
 }

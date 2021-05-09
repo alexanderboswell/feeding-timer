@@ -9,10 +9,8 @@ import SwiftUI
 
 @main
 struct FeedingTimerApp: App {
-	let timerManager = TimerManager()
 	
 	init() {
-		timerManager.load()
 		NotificationManager().AskForPermission()
 	}
 	
@@ -20,7 +18,6 @@ struct FeedingTimerApp: App {
         WindowGroup {
             NavigationView {
                 ContentView()
-					.environmentObject(timerManager)
             }
         }
         WKNotificationScene(controller: NotificationController.self, category: "myCategory")
@@ -29,6 +26,6 @@ struct FeedingTimerApp: App {
 
 struct FeedingTimerApp_Previews: PreviewProvider {
   static var previews: some View {
-	ContentView().environmentObject(TimerManager())
+	ContentView()
   }
 }
