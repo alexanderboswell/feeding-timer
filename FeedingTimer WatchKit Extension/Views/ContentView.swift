@@ -6,8 +6,7 @@
 //
 
 import SwiftUI
-private var DEFAULT_HOUR: Int = 3
-private var DEFAULT_MINUTE: Int = 0
+
 struct ContentView: View {
 	@AppStorage("nextFeedingTime")
 	var nextFeedingTimeShadow: Double = DateState.notSet.rawValue
