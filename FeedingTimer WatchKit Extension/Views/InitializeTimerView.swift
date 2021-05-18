@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ClockKit
 
 struct InitializeTimerView: View {
 	@AppStorage("selectedHour") var selectedHour = 3
@@ -30,6 +31,7 @@ struct InitializeTimerView: View {
 				let nextFeedingDate = Date(timeIntervalSinceNow: addedSeconds)
 				nextFeedingTimeShadow = nextFeedingDate.timeIntervalSince1970
 				NotificationManager().scheduleLocalNotification(timeIntervalSinceNow: addedSeconds, title: NSLocalizedString("notification-title", comment: "Notification title for the next baby feeding"), subtitle: NSLocalizedString("notification-subtitle", comment: "Notification subtitle for the next baby feeding"))
+				ComplicationController.reloadComplications()
 				
 			}, label: {
 				Text("start-text")

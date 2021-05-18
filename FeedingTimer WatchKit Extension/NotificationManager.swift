@@ -24,7 +24,6 @@ class NotificationManager {
 		content.title = title
 		content.subtitle = subtitle
 		content.sound = UNNotificationSound.default
-		print(timeIntervalSinceNow)
 		let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeIntervalSinceNow, repeats: false)
 		
 		let identifier = UUID()

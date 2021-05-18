@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import UserNotifications
+import Foundation
+
 
 @main
 struct FeedingTimerApp: App {
@@ -20,7 +23,7 @@ struct FeedingTimerApp: App {
                 ContentView()
             }
         }
-        WKNotificationScene(controller: NotificationController.self, category: "myCategory")
+        WKNotificationScene(controller: NotificationController.self, category: "NextFeedingTime")
     }
 }
 

@@ -31,6 +31,7 @@ struct CountdownView: View {
 			Button(action: {
 				NotificationManager().removeLocationNotification()
 				nextFeedingTimeShadow = DateState.notSet.rawValue
+				ComplicationController.reloadComplications()
 			}, label: {
 				Text("cancel-text")
 			})
