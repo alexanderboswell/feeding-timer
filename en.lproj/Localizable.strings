@@ -14,3 +14,7 @@
 "hour-abbreviation" = "hrs";
 "minutes-abbreviation" = "mins";
 "timer-headline" = "Next feeding in...";
+"unset-complication-simple" = "SET";
+"unset-complication-verbose" = "Set next feeding";
+"set-complication-verbose" = "Next feeding at";
+"app-title" = "Feeding Timer";

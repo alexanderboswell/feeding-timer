@@ -14,3 +14,7 @@
 "hour-abbreviation" = "ore";
 "minutes-abbreviation" = "minuti";
 "timer-headline" = "La prossima poppata...";
+"unset-complication-simple" = "Mettere";
+"unset-complication-verbose" = "Alimentazione";
+"set-complication-verbose" = "Alimentazione a";
+"app-title" = "Feeding Timer";

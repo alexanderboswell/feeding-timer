@@ -11,7 +11,7 @@ struct ContentView: View {
 	@AppStorage("nextFeedingTime")
 	var nextFeedingTimeShadow: Double = DateState.notSet.rawValue
 	@State var nextFeedingTime: Date = Date()
-	
+
 	var body: some View {
 		VStack {
 			Text("timer-headline")

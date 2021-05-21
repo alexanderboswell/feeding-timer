@@ -104,9 +104,14 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 			dateFormatterPrint.dateFormat = "a"
 			meridiemText = dateFormatterPrint.string(from: data)
 		}
-		
-		let simpleDateTextProvider = CLKSimpleTextProvider(text:  nextFeedingSet ? nextFeedingTimeText : "SET")
-		let simpleDateMeridiemTextProvider = CLKSimpleTextProvider(text:  nextFeedingSet ? nextFeedingTimeText + meridiemText : "SET")
+
+		let appTitleText = NSLocalizedString("app-title", comment: "The title of the application")
+		let simpleUnsetText = NSLocalizedString("unset-complication-simple", comment: "A message when the next feeding is not set")
+		let simpleDateTextProvider = CLKSimpleTextProvider(text:  nextFeedingSet ? nextFeedingTimeText : simpleUnsetText)
+		let simpleDateMeridiemTextProvider = CLKSimpleTextProvider(text:  nextFeedingSet ? nextFeedingTimeText + meridiemText : simpleUnsetText)
+		let verboseUnsetText = NSLocalizedString("unset-complication-verbose", comment: "A message when the next feeding is not set")
+		let verboseSetText = NSLocalizedString("set-complication-verbose", comment: "A message when the next feeding is set") + " ";
+		let emptyTimeText = "--:--"
 		switch complication.family {
 		case .graphicCorner:
 			return CLKComplicationTemplateGraphicCornerTextImage(textProvider: simpleDateMeridiemTextProvider, imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Corner")!))
@@ -119,26 +124,26 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 		case .extraLarge:
 			return CLKComplicationTemplateExtraLargeStackImage(line1ImageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Extra Large")!), line2TextProvider: simpleDateMeridiemTextProvider)
 		case .graphicBezel:
-			let textProvider = CLKSimpleTextProvider(text: nextFeedingSet ? "Next feeding at " + nextFeedingTimeText + meridiemText : "Set next feeding")
+			let textProvider = CLKSimpleTextProvider(text: nextFeedingSet ? verboseSetText + nextFeedingTimeText + meridiemText : verboseUnsetText)
 			return CLKComplicationTemplateGraphicBezelCircularText(circularTemplate: CLKComplicationTemplateGraphicCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Bezel")!)), textProvider: textProvider)
 		case .graphicExtraLarge:
 			return CLKComplicationTemplateGraphicExtraLargeCircularStackImage(line1ImageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Extra Large")!), line2TextProvider: simpleDateTextProvider)
 		case .modularLarge:
-			let headerTextProvider = CLKSimpleTextProvider(text:  nextFeedingSet ? "Next feeding at" : "Set next feeding")
+			let headerTextProvider = CLKSimpleTextProvider(text:  nextFeedingSet ? verboseSetText : verboseUnsetText)
 			headerTextProvider.tintColor = UIColor(red: 15/255, green: 159/255, blue: 219/255, alpha: 1.0)
-			let bodyTextProvider = CLKSimpleTextProvider(text:  nextFeedingSet ? nextFeedingTimeText + meridiemText : "--:--")
+			let bodyTextProvider = CLKSimpleTextProvider(text:  nextFeedingSet ? nextFeedingTimeText + meridiemText : emptyTimeText)
 			return CLKComplicationTemplateModularLargeTallBody(headerTextProvider: headerTextProvider, bodyTextProvider: bodyTextProvider)
 		case .utilitarianSmallFlat:
 			return CLKComplicationTemplateUtilitarianSmallFlat(textProvider: simpleDateMeridiemTextProvider, imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Utilitarian")!))
 		case .utilitarianSmall:
 			return CLKComplicationTemplateUtilitarianSmallRingText(textProvider: simpleDateTextProvider, fillFraction: 1.0, ringStyle: .closed)
 		case .utilitarianLarge:
-			return CLKComplicationTemplateUtilitarianLargeFlat(textProvider: CLKSimpleTextProvider(text: nextFeedingSet ? nextFeedingTimeText + meridiemText : "SET NEXT FEEDING"), imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Utilitarian")!))
+			return CLKComplicationTemplateUtilitarianLargeFlat(textProvider: CLKSimpleTextProvider(text: nextFeedingSet ? nextFeedingTimeText + meridiemText : verboseUnsetText), imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Utilitarian")!))
 		case .graphicRectangular:
-			let headerTextProvider = CLKSimpleTextProvider(text: "Feeding Timer")
+			let headerTextProvider = CLKSimpleTextProvider(text: appTitleText)
 			headerTextProvider.tintColor = UIColor(red: 15/255, green: 159/255, blue: 219/255, alpha: 1.0)
-			let body1TextProvider = CLKSimpleTextProvider(text:  nextFeedingSet ? "Next feeding at" : "Set next feeding")
-			let body2TextProvider = CLKSimpleTextProvider(text:  nextFeedingSet ? nextFeedingTimeText + meridiemText : "--:--")
+			let body1TextProvider = CLKSimpleTextProvider(text:  nextFeedingSet ? verboseSetText : verboseUnsetText)
+			let body2TextProvider = CLKSimpleTextProvider(text:  nextFeedingSet ? nextFeedingTimeText + meridiemText : emptyTimeText)
 			return CLKComplicationTemplateGraphicRectangularStandardBody(headerTextProvider: headerTextProvider, body1TextProvider: body1TextProvider, body2TextProvider: body2TextProvider)
 		@unknown default:
 			return nil

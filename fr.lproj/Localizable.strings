@@ -14,3 +14,7 @@
 "hour-abbreviation" = "heures";
 "minutes-abbreviation" = "minutes";
 "timer-headline" = "Prochaine alimentation du bébé...";
+"unset-complication-simple" = "Mettre";
+"unset-complication-verbose" = "Définir l'alimentation";
+"set-complication-verbose" = "Alimentation";
+"app-title" = "Feeding Timer";

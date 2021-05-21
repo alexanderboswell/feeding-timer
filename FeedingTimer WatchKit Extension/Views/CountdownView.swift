@@ -7,8 +7,13 @@
 
 import SwiftUI
 
+
 struct CountdownView: View {
-	@State var date: Date = Date()
+	@State var date: Date = Date() {
+		didSet {
+			checkNextFeedingDate()
+		}
+	}
 	@AppStorage("nextFeedingTime")
 	var nextFeedingTimeShadow: Double = 0
 	@State var nextFeedingTime: Date?
@@ -37,12 +42,17 @@ struct CountdownView: View {
 			})
 		}
 		.onAppear {
-			let currentNextFeeding = Date(timeIntervalSince1970: nextFeedingTimeShadow)
-			if currentNextFeeding < Date() {
-				nextFeedingTime = nil
-			} else {
-				nextFeedingTime = currentNextFeeding
-			}
+			checkNextFeedingDate()
+		}
+	}
+
+	func checkNextFeedingDate() {
+		let currentNextFeeding = Date(timeIntervalSince1970: nextFeedingTimeShadow)
+		if currentNextFeeding < Date() {
+			nextFeedingTime = nil
+			nextFeedingTimeShadow = DateState.notSet.rawValue
+		} else {
+			nextFeedingTime = currentNextFeeding
 		}
 	}
 }
