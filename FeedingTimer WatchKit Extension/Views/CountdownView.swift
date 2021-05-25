@@ -9,6 +9,7 @@ import SwiftUI
 
 
 struct CountdownView: View {
+	@State var isViewDisplayed = false
 	@State var date: Date = Date() {
 		didSet {
 			checkNextFeedingDate()
@@ -20,14 +21,16 @@ struct CountdownView: View {
 	
 	var timer: Timer {
 		Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-			self.date = Date()
+			if isViewDisplayed {
+				self.date = Date()
+			}
 		}
 	}
 	
 	var body: some View {
 		VStack {
 			if nextFeedingTime != nil {
-				Text(nextFeedingTime!, style: .timer)
+				Text(nextFeedingTime!.advanced(by: TimeInterval(1)), style: .timer)
 					.onAppear(perform: {
 						_ = self.timer
 					})
@@ -42,7 +45,11 @@ struct CountdownView: View {
 			})
 		}
 		.onAppear {
+			self.isViewDisplayed = true
 			checkNextFeedingDate()
+		}
+		.onDisappear {
+			self.isViewDisplayed = false
 		}
 	}
 
