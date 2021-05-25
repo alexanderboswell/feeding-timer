@@ -21,7 +21,7 @@ struct InitializeTimerView: View {
 					DateComponentPickerView(label: NSLocalizedString("hour-abbreviation", comment: "Hours label for timer"), interval: 1, intervalCount: 13, selection: $selectedHour)
 						.frame(maxWidth: geometry.size.width / 2)
 						.clipped()
-					DateComponentPickerView(label: NSLocalizedString("minutes-abbreviation", comment: "Minutes label for timer"), interval: 1, intervalCount: 12, selection: $selectedMinutes)
+					DateComponentPickerView(label: NSLocalizedString("minutes-abbreviation", comment: "Minutes label for timer"), interval: 5, intervalCount: 12, selection: $selectedMinutes)
 						.frame(maxWidth: geometry.size.width / 2)
 						.clipped()
 				}

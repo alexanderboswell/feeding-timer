@@ -15,7 +15,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 	
 	func getComplicationDescriptors(handler: @escaping ([CLKComplicationDescriptor]) -> Void) {
 		let descriptors = [
-			CLKComplicationDescriptor(identifier: "nextFeedingComplication", displayName: "Feeding Timer", supportedFamilies: CLKComplicationFamily.allCases)
+			CLKComplicationDescriptor(identifier: "nextFeedingComplication", displayName: "Feeding Timer", supportedFamilies: [CLKComplicationFamily.graphicCorner, CLKComplicationFamily.graphicCircular, CLKComplicationFamily.circularSmall, CLKComplicationFamily.modularSmall, CLKComplicationFamily.extraLarge, CLKComplicationFamily.graphicBezel, CLKComplicationFamily.graphicExtraLarge, CLKComplicationFamily.modularLarge, CLKComplicationFamily.utilitarianSmallFlat, CLKComplicationFamily.utilitarianLarge, CLKComplicationFamily.graphicRectangular])
 		]
 		
 		// Call the handler with the currently supported complication descriptors
@@ -116,7 +116,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 		case .graphicCorner:
 			return CLKComplicationTemplateGraphicCornerTextImage(textProvider: simpleDateMeridiemTextProvider, imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Corner")!))
 		case .graphicCircular:
-			return CLKComplicationTemplateGraphicCircularStackImage(line1ImageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Circular")!), line2TextProvider: simpleDateTextProvider)
+			return CLKComplicationTemplateGraphicCircularView(ComplicationViewCircular(text: nextFeedingSet ? nextFeedingTimeText : simpleUnsetText))
 		case .circularSmall:
 			return CLKComplicationTemplateCircularSmallStackImage(line1ImageProvider:  CLKImageProvider(onePieceImage: UIImage(named: "Complication/Circular")!), line2TextProvider: simpleDateTextProvider)
 		case .modularSmall:
@@ -127,7 +127,12 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 			let textProvider = CLKSimpleTextProvider(text: nextFeedingSet ? verboseSetText + nextFeedingTimeText + meridiemText : verboseUnsetText)
 			return CLKComplicationTemplateGraphicBezelCircularText(circularTemplate: CLKComplicationTemplateGraphicCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Bezel")!)), textProvider: textProvider)
 		case .graphicExtraLarge:
-			return CLKComplicationTemplateGraphicExtraLargeCircularStackImage(line1ImageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Extra Large")!), line2TextProvider: simpleDateTextProvider)
+			guard #available(watchOSApplicationExtension 7.0, *) else {
+				return nil
+			}
+			return CLKComplicationTemplateGraphicExtraLargeCircularView(
+				ComplicationViewExtraLargeCircular(
+					text: nextFeedingSet ? nextFeedingTimeText + " " + meridiemText : simpleUnsetText))
 		case .modularLarge:
 			let headerTextProvider = CLKSimpleTextProvider(text:  nextFeedingSet ? verboseSetText : verboseUnsetText)
 			headerTextProvider.tintColor = UIColor(red: 15/255, green: 159/255, blue: 219/255, alpha: 1.0)
@@ -135,8 +140,6 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 			return CLKComplicationTemplateModularLargeTallBody(headerTextProvider: headerTextProvider, bodyTextProvider: bodyTextProvider)
 		case .utilitarianSmallFlat:
 			return CLKComplicationTemplateUtilitarianSmallFlat(textProvider: simpleDateMeridiemTextProvider, imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Utilitarian")!))
-		case .utilitarianSmall:
-			return CLKComplicationTemplateUtilitarianSmallRingText(textProvider: simpleDateTextProvider, fillFraction: 1.0, ringStyle: .closed)
 		case .utilitarianLarge:
 			return CLKComplicationTemplateUtilitarianLargeFlat(textProvider: CLKSimpleTextProvider(text: nextFeedingSet ? nextFeedingTimeText + meridiemText : verboseUnsetText), imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Utilitarian")!))
 		case .graphicRectangular:
@@ -145,7 +148,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 			let body1TextProvider = CLKSimpleTextProvider(text:  nextFeedingSet ? verboseSetText : verboseUnsetText)
 			let body2TextProvider = CLKSimpleTextProvider(text:  nextFeedingSet ? nextFeedingTimeText + meridiemText : emptyTimeText)
 			return CLKComplicationTemplateGraphicRectangularStandardBody(headerTextProvider: headerTextProvider, body1TextProvider: body1TextProvider, body2TextProvider: body2TextProvider)
-		@unknown default:
+		default:
 			return nil
 		}
 	}
