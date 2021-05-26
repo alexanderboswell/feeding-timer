@@ -135,7 +135,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 					text: nextFeedingSet ? nextFeedingTimeText + " " + meridiemText : simpleUnsetText))
 		case .modularLarge:
 			let headerTextProvider = CLKSimpleTextProvider(text:  nextFeedingSet ? verboseSetText : verboseUnsetText)
-			headerTextProvider.tintColor = UIColor(red: 15/255, green: 159/255, blue: 219/255, alpha: 1.0)
+			headerTextProvider.tintColor = UIColor(Color.mainColor)
 			let bodyTextProvider = CLKSimpleTextProvider(text:  nextFeedingSet ? nextFeedingTimeText + meridiemText : emptyTimeText)
 			return CLKComplicationTemplateModularLargeTallBody(headerTextProvider: headerTextProvider, bodyTextProvider: bodyTextProvider)
 		case .utilitarianSmallFlat:
@@ -144,7 +144,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 			return CLKComplicationTemplateUtilitarianLargeFlat(textProvider: CLKSimpleTextProvider(text: nextFeedingSet ? nextFeedingTimeText + meridiemText : verboseUnsetText), imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Utilitarian")!))
 		case .graphicRectangular:
 			let headerTextProvider = CLKSimpleTextProvider(text: appTitleText)
-			headerTextProvider.tintColor = UIColor(red: 15/255, green: 159/255, blue: 219/255, alpha: 1.0)
+			headerTextProvider.tintColor = UIColor(Color.mainColor)
 			let body1TextProvider = CLKSimpleTextProvider(text:  nextFeedingSet ? verboseSetText : verboseUnsetText)
 			let body2TextProvider = CLKSimpleTextProvider(text:  nextFeedingSet ? nextFeedingTimeText + meridiemText : emptyTimeText)
 			return CLKComplicationTemplateGraphicRectangularStandardBody(headerTextProvider: headerTextProvider, body1TextProvider: body1TextProvider, body2TextProvider: body2TextProvider)

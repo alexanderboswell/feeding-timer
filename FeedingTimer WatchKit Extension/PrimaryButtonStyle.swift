@@ -8,9 +8,6 @@
 import Foundation
 import SwiftUI
 
-
-let primaryColor = Color(red: 15/255, green: 159/255, blue: 219/255, opacity: 1.0)
-
 struct PrimaryButtonStyle: ButtonStyle {
 	func makeBody(configuration: Self.Configuration) -> some View {
 		PrimaryStyleView(configuration: configuration)
@@ -26,7 +23,7 @@ private extension PrimaryButtonStyle {
 			return configuration.label
 				.frame(maxWidth: .infinity)
 				.padding()
-				.background(isEnabled ? primaryColor : .gray)
+				.background(isEnabled ? Color.mainColor : .gray)
 				.cornerRadius(16)
 				.foregroundColor(.white)
 				.opacity(configuration.isPressed ? 0.8 : 1.0)

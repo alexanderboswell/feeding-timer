@@ -27,6 +27,7 @@
 		F3A6B2362633E4720033D3F7 /* InitializeTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6B2352633E4710033D3F7 /* InitializeTimerView.swift */; };
 		F3B3F9E5263F565F00918930 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B3F9E4263F565F00918930 /* PrimaryButtonStyle.swift */; };
 		F3D0484B265C9CB30085A2D9 /* ComplicationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0484A265C9CB30085A2D9 /* ComplicationsView.swift */; };
+		F3D0484D265CC68F0085A2D9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0484C265CC68F0085A2D9 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		F3A6B2352633E4710033D3F7 /* InitializeTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeTimerView.swift; sourceTree = "<group>"; };
 		F3B3F9E4263F565F00918930 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		F3D0484A265C9CB30085A2D9 /* ComplicationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationsView.swift; sourceTree = "<group>"; };
+		F3D0484C265CC68F0085A2D9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F34377BA265DCEF700A6F901 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				F37B3E7A263A71AB0005EAF1 /* NotificationManager.swift */,
+				F3A6B20D263305560033D3F7 /* NotificationController.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		F34377BB265DCF1000A6F901 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F37B3E6A2639EC390005EAF1 /* DateState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F34377BC265DCF2D00A6F901 /* Complications */ = {
+			isa = PBXGroup;
+			children = (
+				F3A6B211263305560033D3F7 /* ComplicationController.swift */,
+			);
+			path = Complications;
+			sourceTree = "<group>";
+		};
 		F3A6B1ED2633054F0033D3F7 = {
 			isa = PBXGroup;
 			children = (
@@ -142,18 +169,17 @@
 		F3A6B208263305560033D3F7 /* FeedingTimer WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				F37B3E6A2639EC390005EAF1 /* DateState.swift */,
-				F37B3E7A263A71AB0005EAF1 /* NotificationManager.swift */,
+				F34377BC265DCF2D00A6F901 /* Complications */,
+				F34377BB265DCF1000A6F901 /* Models */,
+				F34377BA265DCEF700A6F901 /* Notifications */,
 				F3A6B23A2633E4750033D3F7 /* Views */,
 				F3A6B209263305560033D3F7 /* FeedingTimerApp.swift */,
-				F3A6B20D263305560033D3F7 /* NotificationController.swift */,
-				F3A6B20F263305560033D3F7 /* NotificationView.swift */,
-				F3A6B211263305560033D3F7 /* ComplicationController.swift */,
 				F3A6B213263305570033D3F7 /* Assets.xcassets */,
 				F3A6B218263305570033D3F7 /* Info.plist */,
 				F3A6B219263305570033D3F7 /* PushNotificationPayload.apns */,
 				F3A6B215263305570033D3F7 /* Preview Content */,
 				F3B3F9E4263F565F00918930 /* PrimaryButtonStyle.swift */,
+				F3D0484C265CC68F0085A2D9 /* Extensions.swift */,
 			);
 			path = "FeedingTimer WatchKit Extension";
 			sourceTree = "<group>";
@@ -169,6 +195,7 @@
 		F3A6B23A2633E4750033D3F7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F3A6B20F263305560033D3F7 /* NotificationView.swift */,
 				F3A6B2352633E4710033D3F7 /* InitializeTimerView.swift */,
 				F3A6B20B263305560033D3F7 /* ContentView.swift */,
 				F37B3E6F263A17D90005EAF1 /* CountdownView.swift */,
@@ -318,6 +345,7 @@
 				F3A6B212263305560033D3F7 /* ComplicationController.swift in Sources */,
 				F3D0484B265C9CB30085A2D9 /* ComplicationsView.swift in Sources */,
 				F37B3E70263A17D90005EAF1 /* CountdownView.swift in Sources */,
+				F3D0484D265CC68F0085A2D9 /* Extensions.swift in Sources */,
 				F3A6B20A263305560033D3F7 /* FeedingTimerApp.swift in Sources */,
 				F3A6B2362633E4720033D3F7 /* InitializeTimerView.swift in Sources */,
 				F37B3E9C263B32920005EAF1 /* DateComponentPickerView.swift in Sources */,
