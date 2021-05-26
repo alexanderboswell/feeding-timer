@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F33775FE265DD77600A8E229 /* FeedingTimer_AppUI_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33775FD265DD77600A8E229 /* FeedingTimer_AppUI_Tests.swift */; };
 		F37B3E6B2639EC390005EAF1 /* DateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B3E6A2639EC390005EAF1 /* DateState.swift */; };
 		F37B3E70263A17D90005EAF1 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B3E6F263A17D90005EAF1 /* CountdownView.swift */; };
 		F37B3E7B263A71AB0005EAF1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B3E7A263A71AB0005EAF1 /* NotificationManager.swift */; };
@@ -26,11 +27,19 @@
 		F3A6B217263305570033D3F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3A6B216263305570033D3F7 /* Preview Assets.xcassets */; };
 		F3A6B2362633E4720033D3F7 /* InitializeTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6B2352633E4710033D3F7 /* InitializeTimerView.swift */; };
 		F3B3F9E5263F565F00918930 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B3F9E4263F565F00918930 /* PrimaryButtonStyle.swift */; };
+		F3CDEA9D265DD5DF004BDE8A /* FeedingTimer_Unit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CDEA9C265DD5DF004BDE8A /* FeedingTimer_Unit_Tests.swift */; };
 		F3D0484B265C9CB30085A2D9 /* ComplicationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0484A265C9CB30085A2D9 /* ComplicationsView.swift */; };
 		F3D0484D265CC68F0085A2D9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0484C265CC68F0085A2D9 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F3377600265DD77600A8E229 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3A6B1EE2633054F0033D3F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3A6B1F7263305500033D3F7;
+			remoteInfo = "FeedingTimer WatchKit App";
+		};
 		F3A6B1FA263305500033D3F7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F3A6B1EE2633054F0033D3F7 /* Project object */;
@@ -39,6 +48,13 @@
 			remoteInfo = "FeedingTimer WatchKit App";
 		};
 		F3A6B206263305560033D3F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3A6B1EE2633054F0033D3F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3A6B203263305560033D3F7;
+			remoteInfo = "FeedingTimer WatchKit Extension";
+		};
+		F3CDEA9F265DD5DF004BDE8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F3A6B1EE2633054F0033D3F7 /* Project object */;
 			proxyType = 1;
@@ -73,6 +89,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F33775FB265DD77600A8E229 /* FeedingTimer AppUI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FeedingTimer AppUI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F33775FD265DD77600A8E229 /* FeedingTimer_AppUI_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedingTimer_AppUI_Tests.swift; sourceTree = "<group>"; };
+		F33775FF265DD77600A8E229 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F37B3E6A2639EC390005EAF1 /* DateState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateState.swift; sourceTree = "<group>"; };
 		F37B3E6F263A17D90005EAF1 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		F37B3E7A263A71AB0005EAF1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
@@ -97,12 +116,29 @@
 		F3A6B219263305570033D3F7 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		F3A6B2352633E4710033D3F7 /* InitializeTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeTimerView.swift; sourceTree = "<group>"; };
 		F3B3F9E4263F565F00918930 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
+		F3CDEA9A265DD5DF004BDE8A /* FeedingTimer Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FeedingTimer Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3CDEA9C265DD5DF004BDE8A /* FeedingTimer_Unit_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedingTimer_Unit_Tests.swift; sourceTree = "<group>"; };
+		F3CDEA9E265DD5DF004BDE8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3D0484A265C9CB30085A2D9 /* ComplicationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationsView.swift; sourceTree = "<group>"; };
 		F3D0484C265CC68F0085A2D9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F33775F8265DD77600A8E229 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F3A6B201263305560033D3F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3CDEA97265DD5DF004BDE8A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -112,6 +148,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F33775FC265DD77600A8E229 /* FeedingTimer AppUI Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F33775FD265DD77600A8E229 /* FeedingTimer_AppUI_Tests.swift */,
+				F33775FF265DD77600A8E229 /* Info.plist */,
+			);
+			path = "FeedingTimer AppUI Tests";
+			sourceTree = "<group>";
+		};
 		F34377BA265DCEF700A6F901 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +188,8 @@
 				F37B3E8A263B26C30005EAF1 /* Localizable.strings */,
 				F3A6B1FC263305500033D3F7 /* FeedingTimer WatchKit App */,
 				F3A6B208263305560033D3F7 /* FeedingTimer WatchKit Extension */,
+				F3CDEA9B265DD5DF004BDE8A /* FeedingTimer Unit Tests */,
+				F33775FC265DD77600A8E229 /* FeedingTimer AppUI Tests */,
 				F3A6B1F52633054F0033D3F7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -153,6 +200,8 @@
 				F3A6B1F42633054F0033D3F7 /* FeedingTimer.app */,
 				F3A6B1F8263305500033D3F7 /* FeedingTimer WatchKit App.app */,
 				F3A6B204263305560033D3F7 /* FeedingTimer WatchKit Extension.appex */,
+				F3CDEA9A265DD5DF004BDE8A /* FeedingTimer Unit Tests.xctest */,
+				F33775FB265DD77600A8E229 /* FeedingTimer AppUI Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,9 +254,36 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		F3CDEA9B265DD5DF004BDE8A /* FeedingTimer Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F3CDEA9C265DD5DF004BDE8A /* FeedingTimer_Unit_Tests.swift */,
+				F3CDEA9E265DD5DF004BDE8A /* Info.plist */,
+			);
+			path = "FeedingTimer Unit Tests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F33775FA265DD77600A8E229 /* FeedingTimer AppUI Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3377604265DD77600A8E229 /* Build configuration list for PBXNativeTarget "FeedingTimer AppUI Tests" */;
+			buildPhases = (
+				F33775F7265DD77600A8E229 /* Sources */,
+				F33775F8265DD77600A8E229 /* Frameworks */,
+				F33775F9265DD77600A8E229 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3377601265DD77600A8E229 /* PBXTargetDependency */,
+			);
+			name = "FeedingTimer AppUI Tests";
+			productName = "FeedingTimer AppUI Tests";
+			productReference = F33775FB265DD77600A8E229 /* FeedingTimer AppUI Tests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		F3A6B1F32633054F0033D3F7 /* FeedingTimer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3A6B224263305570033D3F7 /* Build configuration list for PBXNativeTarget "FeedingTimer" */;
@@ -259,15 +335,37 @@
 			productReference = F3A6B204263305560033D3F7 /* FeedingTimer WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
+		F3CDEA99265DD5DF004BDE8A /* FeedingTimer Unit Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3CDEAA3265DD5DF004BDE8A /* Build configuration list for PBXNativeTarget "FeedingTimer Unit Tests" */;
+			buildPhases = (
+				F3CDEA96265DD5DF004BDE8A /* Sources */,
+				F3CDEA97265DD5DF004BDE8A /* Frameworks */,
+				F3CDEA98265DD5DF004BDE8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3CDEAA0265DD5DF004BDE8A /* PBXTargetDependency */,
+			);
+			name = "FeedingTimer Unit Tests";
+			productName = "FeedingTimer Unit Tests";
+			productReference = F3CDEA9A265DD5DF004BDE8A /* FeedingTimer Unit Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		F3A6B1EE2633054F0033D3F7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					F33775FA265DD77600A8E229 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = F3A6B1F7263305500033D3F7;
+					};
 					F3A6B1F32633054F0033D3F7 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -276,6 +374,10 @@
 					};
 					F3A6B203263305560033D3F7 = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					F3CDEA99265DD5DF004BDE8A = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = F3A6B203263305560033D3F7;
 					};
 				};
 			};
@@ -298,11 +400,20 @@
 				F3A6B1F32633054F0033D3F7 /* FeedingTimer */,
 				F3A6B1F7263305500033D3F7 /* FeedingTimer WatchKit App */,
 				F3A6B203263305560033D3F7 /* FeedingTimer WatchKit Extension */,
+				F3CDEA99265DD5DF004BDE8A /* FeedingTimer Unit Tests */,
+				F33775FA265DD77600A8E229 /* FeedingTimer AppUI Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F33775F9265DD77600A8E229 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F3A6B1F22633054F0033D3F7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -330,9 +441,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3CDEA98265DD5DF004BDE8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F33775F7265DD77600A8E229 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F33775FE265DD77600A8E229 /* FeedingTimer_AppUI_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F3A6B200263305560033D3F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,9 +479,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3CDEA96265DD5DF004BDE8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3CDEA9D265DD5DF004BDE8A /* FeedingTimer_Unit_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F3377601265DD77600A8E229 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3A6B1F7263305500033D3F7 /* FeedingTimer WatchKit App */;
+			targetProxy = F3377600265DD77600A8E229 /* PBXContainerItemProxy */;
+		};
 		F3A6B1FB263305500033D3F7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F3A6B1F7263305500033D3F7 /* FeedingTimer WatchKit App */;
@@ -365,6 +504,11 @@
 			isa = PBXTargetDependency;
 			target = F3A6B203263305560033D3F7 /* FeedingTimer WatchKit Extension */;
 			targetProxy = F3A6B206263305560033D3F7 /* PBXContainerItemProxy */;
+		};
+		F3CDEAA0265DD5DF004BDE8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3A6B203263305560033D3F7 /* FeedingTimer WatchKit Extension */;
+			targetProxy = F3CDEA9F265DD5DF004BDE8A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -383,6 +527,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F3377602265DD77600A8E229 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6N8P4N2HZ;
+				INFOPLIST_FILE = "FeedingTimer AppUI Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bozzy.FeedingTimer-AppUI-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "FeedingTimer WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		F3377603265DD77600A8E229 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6N8P4N2HZ;
+				INFOPLIST_FILE = "FeedingTimer AppUI Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bozzy.FeedingTimer-AppUI-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "FeedingTimer WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
 		F3A6B21A263305570033D3F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -613,9 +799,62 @@
 			};
 			name = Release;
 		};
+		F3CDEAA1265DD5DF004BDE8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6N8P4N2HZ;
+				INFOPLIST_FILE = "FeedingTimer Unit Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bozzy.FeedingTimer-Unit-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FeedingTimer WatchKit Extension.appex/FeedingTimer WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		F3CDEAA2265DD5DF004BDE8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6N8P4N2HZ;
+				INFOPLIST_FILE = "FeedingTimer Unit Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bozzy.FeedingTimer-Unit-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FeedingTimer WatchKit Extension.appex/FeedingTimer WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F3377604265DD77600A8E229 /* Build configuration list for PBXNativeTarget "FeedingTimer AppUI Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3377602265DD77600A8E229 /* Debug */,
+				F3377603265DD77600A8E229 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F3A6B1F12633054F0033D3F7 /* Build configuration list for PBXProject "FeedingTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -648,6 +887,15 @@
 			buildConfigurations = (
 				F3A6B225263305570033D3F7 /* Debug */,
 				F3A6B226263305570033D3F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3CDEAA3265DD5DF004BDE8A /* Build configuration list for PBXNativeTarget "FeedingTimer Unit Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3CDEAA1265DD5DF004BDE8A /* Debug */,
+				F3CDEAA2265DD5DF004BDE8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

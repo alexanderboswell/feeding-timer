@@ -42,6 +42,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F3CDEA99265DD5DF004BDE8A"
+               BuildableName = "FeedingTimer Unit Tests.xctest"
+               BlueprintName = "FeedingTimer Unit Tests"
+               ReferencedContainer = "container:FeedingTimer.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F33775FA265DD77600A8E229"
+               BuildableName = "FeedingTimer AppUI Tests.xctest"
+               BlueprintName = "FeedingTimer AppUI Tests"
+               ReferencedContainer = "container:FeedingTimer.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
