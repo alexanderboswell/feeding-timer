@@ -30,6 +30,8 @@
 		F3CDEA9D265DD5DF004BDE8A /* FeedingTimer_Unit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CDEA9C265DD5DF004BDE8A /* FeedingTimer_Unit_Tests.swift */; };
 		F3D0484B265C9CB30085A2D9 /* ComplicationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0484A265C9CB30085A2D9 /* ComplicationsView.swift */; };
 		F3D0484D265CC68F0085A2D9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0484C265CC68F0085A2D9 /* Extensions.swift */; };
+		F3DFC7ED2660C09D00BA05B3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0484C265CC68F0085A2D9 /* Extensions.swift */; };
+		F3DFC7EE2660C0A100BA05B3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0484C265CC68F0085A2D9 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +187,7 @@
 		F3A6B1ED2633054F0033D3F7 = {
 			isa = PBXGroup;
 			children = (
+				F3D0484C265CC68F0085A2D9 /* Extensions.swift */,
 				F37B3E8A263B26C30005EAF1 /* Localizable.strings */,
 				F3A6B1FC263305500033D3F7 /* FeedingTimer WatchKit App */,
 				F3A6B208263305560033D3F7 /* FeedingTimer WatchKit Extension */,
@@ -228,7 +231,6 @@
 				F3A6B219263305570033D3F7 /* PushNotificationPayload.apns */,
 				F3A6B215263305570033D3F7 /* Preview Content */,
 				F3B3F9E4263F565F00918930 /* PrimaryButtonStyle.swift */,
-				F3D0484C265CC68F0085A2D9 /* Extensions.swift */,
 			);
 			path = "FeedingTimer WatchKit Extension";
 			sourceTree = "<group>";
@@ -456,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F33775FE265DD77600A8E229 /* FeedingTimer_AppUI_Tests.swift in Sources */,
+				F3DFC7ED2660C09D00BA05B3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +487,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3CDEA9D265DD5DF004BDE8A /* FeedingTimer_Unit_Tests.swift in Sources */,
+				F3DFC7EE2660C0A100BA05B3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

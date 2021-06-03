@@ -26,7 +26,7 @@ struct CountdownView: View {
 			}
 		}
 	}
-	
+
 	var body: some View {
 		VStack {
 			if nextFeedingTime != nil {
@@ -34,7 +34,8 @@ struct CountdownView: View {
 					.onAppear(perform: {
 						_ = self.timer
 					})
-					.font(Font.largeTitle.monospacedDigit())	
+					.font(Font.largeTitle.monospacedDigit())
+					.accessibility(identifier: "TimerCountdown")
 			}
 			Button(action: {
 				NotificationManager().removeLocationNotification()

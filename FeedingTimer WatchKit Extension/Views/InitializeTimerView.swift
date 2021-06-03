@@ -9,8 +9,8 @@ import SwiftUI
 import ClockKit
 
 struct InitializeTimerView: View {
-	@AppStorage("selectedHour") var selectedHour = 3
-	@AppStorage("selectedMinutes") var selectedMinutes = 0
+	@AppStorage("selectedHour") var selectedHour = DefaultTimerValues.hour
+	@AppStorage("selectedMinutes") var selectedMinutes = DefaultTimerValues.minutes
 	@AppStorage("nextFeedingTime")
 	var nextFeedingTimeShadow: Double = 0
 	
@@ -18,7 +18,7 @@ struct InitializeTimerView: View {
 		VStack {
 			GeometryReader { geometry in
 				HStack(spacing: 0){
-					DateComponentPickerView(label: NSLocalizedString("hour-abbreviation", comment: "Hours label for timer"), interval: 1, intervalCount: 13, selection: $selectedHour)
+					DateComponentPickerView(label: NSLocalizedString("hour-abbreviation", comment: "Hours label for timer"), interval: 1, intervalCount: 12, selection: $selectedHour)
 						.frame(maxWidth: geometry.size.width / 2)
 						.clipped()
 					DateComponentPickerView(label: NSLocalizedString("minutes-abbreviation", comment: "Minutes label for timer"), interval: 5, intervalCount: 12, selection: $selectedMinutes)
